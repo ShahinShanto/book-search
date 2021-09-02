@@ -2,3 +2,6 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+#total, #spinner{
+    display: none;
+}

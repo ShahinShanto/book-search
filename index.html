@@ -5,23 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Collection</title>
+    <title>Book Archive</title>
+
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- external css -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <section class="container">
-        <div class="mt-5">
-            <h2 class="text-center text-primary">Search Your Favourite Book</h2>
+        <h2 class="text-center text-primary mt-5 mb-3">Search Your Favorite Book</h2>
+
+        <!-- book search -->
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input id="search-field" type="text" class="form-control" placeholder="Search the book you want"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button onclick="searchBook()" class="btn btn-primary" type="button" id="button-search">search</button>
         </div>
-        <div class="input-group mb-5 w-50 mx-auto">
-            <input id="search-field" type="text" class="form-control" placeholder="Type Book Name"
-                aria-label="Type Book Name" aria-describedby="button-addon2">
-            <button onclick="searchBook()" class="btn btn-primary" type="button" id="button-search">Search</button>
+        <div class="container">
+            <h5 id="total" class="text-center mb-3">Total found <span class="fw-bold" id="total-found"></span> </h1>
+        </div>
+        <div>
+            <p id="error-message" class="fw-bold text-white text-center bg-danger">No result found</p>
+        </div>
+        <div id="spinner" class="bg-primary text-center">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
         </div>
 
+        <!-- book result -->
         <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
         </div>
     </section>
@@ -29,6 +44,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+
+    <!-- javascript -->
     <script src="script.js"></script>
 </body>
 
